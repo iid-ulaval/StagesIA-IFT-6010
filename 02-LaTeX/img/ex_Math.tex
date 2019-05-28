@@ -1,0 +1,21 @@
+\documentclass[french]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\begin{document}
+	
+Le déploiement simple d'expressions mathématiques complexes est une des grandes forces de \LaTeX. Il est tout aussi aisé d'insérer une équation en mode texte (<< text style >>), donc qui s'intègre dans un paragraphe, telles que $V=RI$ ou $\mathbf{b} = \mathbf{A} \mathbf{x}$, que des équations en mode d'affichage hors texte (<< display style >>) sans numérotation,
+\begin{displaymath}
+   b_i = \sum_{j=1}^{2} a_{ij} x_{j},
+\end{displaymath}
+
+ou encore avec numérotation, telle que l'éq.~(\ref{eq:matrice}):
+\begin{equation}
+   \left[ \begin{array}{c} b_{1} \\ b_{2} \end{array} \right]
+      = \left[ \begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array} \right]
+        \times
+        \left[ \begin{array}{c} x_{1} \\ x_{2} \end{array} \right].
+   \label{eq:matrice}
+\end{equation}
+
+L'équation affichée sans numérotation ne possède évidemment pas de numéro, on ne peut donc ni y définir une référence dynamique, ni y référer.
+\end{document}
