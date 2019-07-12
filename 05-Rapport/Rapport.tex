@@ -1,0 +1,1065 @@
+\documentclass[french]{beamer}
+\usefonttheme[onlymath]{serif}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{babel}
+\usepackage{tikz}
+\usepackage{smartdiagram}
+\usepackage[babel]{csquotes}
+\usepackage[url=false, doi=false, style=science, backend=bibtex, bibencoding=ascii]{biblatex}
+\bibliography{IEEEabrv,bib/OAM}
+
+
+\graphicspath{{img/}{../}}
+
+\usepackage{../beamerthemeulaval}
+\usepackage{../beamercolorthemeulaval}
+\logo{\includegraphics[height=0.5cm]{UL_P}\hspace{.2cm}\vspace{.85\paperheight}}
+\newcommand\red[1]{{\color{ulred}{\textbf{#1}}}}
+
+\mode<presentation> {
+	\setbeamercovered{invisible}
+	\setbeamertemplate{navigation symbols}{} % Enlever les icônes de navigation
+}
+
+\title[Communication Scientique]{Communication écrite scientifique}
+%\subtitle[]{}
+
+\author[C. Besse]{Camille Besse}
+\institute[Université Laval]
+{
+	Départment d'Informatique et de Génie Logiciel\\
+	Université Laval, Québec, Canada \\
+	\medskip
+	{\emph{camille.besse@ift.ulaval.ca}}
+}
+%\date{\today} % \today will show current date. 
+% Alternatively, you can specify a date.
+
+
+\AtBeginSection[]{
+  \begin{frame}
+	\Huge \centerline{\insertsection}
+%  	\small \tableofcontents[currentsection, hideothersubsections]
+  \end{frame} 
+}
+
+\begin{document}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}[label=titre, plain]
+	\titlepage
+	\begin{center}\includegraphics[height=1cm]{UL_P}\end{center}
+	
+	\vfill
+	{\tiny{Sources : 
+			\begin{itemize}
+				\item[] \href{http://www2.ift.ulaval.ca/~chaib/IFT-6001/articles/ManuelRuddyLelouche.pdf}{L'art de rédiger - Ruddy Lelouche}
+			\end{itemize}
+		}}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\section*{Contents}
+
+%%---------------------------------------------------------------------------------------------------------------------------------------- 
+%\begin{frame}[label=toc]{Outline}
+%\setlength{\leftskip}{5cm}%
+%\tableofcontents[subsectionstyle=show]
+%\end{frame}
+%
+%
+%
+%
+%%---------------------------------------------------------------------------------------------------------------------------------------- 
+%\section{Votre rapport de stage}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Les différents écrits scientifiques}
+\begin{itemize}
+	\item Article
+	\begin{itemize}
+		\item 6 à 12 pages pour une conférence
+		\item Longueur variable pour les journaux
+	\end{itemize}
+	\item Rapport
+	\begin{itemize}
+		\item Longueur (très) variable
+	\end{itemize}
+	\item Mémoire
+	\begin{itemize}
+		\item À Laval, environ 100 pages; 5 chapitres
+	\end{itemize}
+	\item Thèse
+	\begin{itemize}
+		\item À Laval entre 150 et 200 pages; plus de 5 chaps
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Introduction : Sujet amené}
+
+\begin{center}
+	\LARGE \textbf{\red{Pourquoi ?}}
+\end{center}
+
+\begin{itemize}
+	\item Présenter le \red{contexte de la recherche};
+	\item Les \red{motivations} qui vous ont conduit à faire;
+	\item Des fois, il est bon de préciser votre \red{crédibilité} pour cette recherche :
+	\begin{itemize}
+		\item Prolongeons nos travaux sur $xy$, nous proposons dans cet article...
+		\item Nous continuons nos travaux sur $xy$, en proposant cette fois-ci...
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Introduction : Sujet posé}
+
+\begin{center}
+	\LARGE \textbf{\red{Quoi ?}}
+\end{center}
+
+\begin{itemize}
+	\item De \red{quoi} allez vous parler
+	\item Il devrait être précédé par \red{Pourquoi}, suite au <contexte, motivations>
+	\item Le tout ici est de préciser le quoi ?, c'est-à-dire « Qu'est ce qu'il y a dans ce texte », tout en répondant accessoirement à la question Pourquoi ?, quel est le but de ce texte ?
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Introduction : Sujet divisé}
+
+\begin{center}
+	\LARGE \textbf{\red{Comment ?}}
+\end{center}
+
+Une troisième partie de l'introduction vise à remplir deux fonctions distinctes et complémentaires :
+\begin{itemize}
+	\item Annoncer le plan , les différentes partie de l'écrit
+	\item Justifier le choix de ces parties et leur ordre (démarche argumentaire)
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Introduction : en résumé}
+
+En général pour une introduction il faut répondre aux six questions suivantes : 
+\begin{enumerate}
+	\item dans quel contexte ?
+	\item quelles motivations générales ? 
+	\item de quoi allons nous parler ?
+	\item pourquoi ? (motivations précises)
+	\item dans quel ordre ?
+	\item et pourquoi cet ordre ?
+\end{enumerate}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Introduction : en résumé}
+
+Une introduction mal écrite et c'est la \red{fin} !
+\begin{itemize}
+	\item L'introduction est la porte d'entrée tout écrit scientifique;
+	\item Si elle est mal rédigée, l'examinateur aura tendance;
+	\begin{itemize}
+		\item soit à ne pas aller plus loin;
+		\item soit à y aller avec un jugement défavorable et le tout le reste va se trouver plus ou moins handicapé par ce jugement.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Conclusion}
+\begin{itemize}
+	\item Ne pas la négliger, c'est une partie importante de l'écrit scientifique;
+	\item Si l'introduction est la porte d'entrée, la conclusion est la porte de sortie et il convient donc de la soigner de façon à terminer avec une note positive;
+	\item On trouve 2 sortes de conclusions; la conclusion partielle au niveau de chacun des chapitres et la conclusion finale d'un mémoire (un chap), d'une thèse (un chap) ou d'un article (une section).
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Conclusion : synthèse}
+	\begin{itemize}
+	\item Récapituler ce que le document apporte en soulignant l'importance et les limites de ces apports;
+	\item Si votre approche est originale ou prometteuse, c'est important de le dire en conclusion : Ne pas exagérer cependant;
+	\item Il est possible d'être amené à situer les résultats par rapport à la démarche vue dans l'intro;
+	\item Pas d'idée nouvelle à ce niveau de la conclusion.
+	\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Conclusion : ouverture}
+
+Laisser entrevoir, ce qui peut découler de votre recherche :
+\begin{itemize}
+	\item les extensions possibles;
+	\item Les travaux futurs;
+	\item ou les applications potentielles.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : l'art de bien rédiger}
+\begin{itemize}
+	\item Conduite de l'argumentation.
+	\begin{itemize}
+		\item Pourquoi une bonne argumentation;
+		\item Comment élaborer une bonne argumentation.
+	\end{itemize}
+	\item Qualité de l'écrit.
+	\begin{itemize}
+		\item Fautes de vocabulaire;
+		\item Fautes de grammaire;
+		\item Fautes de ponctuation;
+		\item Style d'écriture.
+	\end{itemize}
+	\item \LaTeX
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : argumentation}
+Pourquoi un bonne argumentation ?
+
+\begin{itemize}
+	\item Convaincre le lecteur en vue de lire l'écrit et de croire à ce qui est dit dans l'écrit.
+	\item Les examinateurs se doivent de donner leurs appréciations quant à la conduite argumentaire des textes qu'ils sont sensé évaluer.
+	\item La FES a un critère explicite intitulé «~Cohérence dans la structure et l'articulation des parties [du document]~»
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : argumentation}
+
+Qu'est ce qu'une bonne argumentation ?
+
+\begin{block}{Défininition de Lelouche par des contre-exemples}
+	Beaucoup d'informations pertinentes, recueillies au cours de la recherche effectuée, mais :
+	\begin{itemize}
+		\item juxtaposées les unes aux autres
+		\item sans analyse critique et sans mettre en évidence :
+		\begin{itemize}
+			\item le lien qu'elles ont les unes avec les autres,
+			\item la contribution qu'elles apportent au point en cours du document.
+		\end{itemize}
+	\end{itemize}
+	A l'inverse, éparpillement ou rencontre fortuite d'informations se rapportant à un même sujet.
+\end{block}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : Fil directeur}
+
+L'utilisation d'un fil directeur développé dans l'introduction aide au suivi du rapport : 
+
+\begin{block}{Paragraphes introductifs et conclusifs}
+	\begin{itemize}
+		\item Deux ou trois phrases maximum
+		\item Permettant de rétablir la ligne dircetrice:
+		\begin{itemize}
+			\item Qu'avons nous vu ?
+			\item En quoi est intéressant ?
+			\item Ou en sommes nous de la démarche ?
+			\item Que nous reste t'il à voir ? 
+			\item Comment allons nous présenter ca ?
+			\item etc.
+		\end{itemize}
+		\item Plus le rapport est long, plus c'est important.
+	\end{itemize}
+\end{block}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : Structure Générale}
+
+\begin{itemize}
+	\item Correspondance entre le titre/sous-titre et le contenu effectif de la partie
+	\item Enchainement \red{logique} des différentes sections en liaison avec le \red{fil directeur}
+	\begin{enumerate}
+		\item Poser les préalables à l'argumentation de la recherche :
+		\begin{itemize}
+			\item Contexte, \red{status quo}, état de l'art, littérature, etc.
+			\item Question ouverte de recherche, \red{objectifs} du projet
+		\end{itemize}
+		\item Poser le modèle proposé en construisant sur les préalables, ou les manquements exposés dans les préalables
+		\begin{itemize}
+			\item Ceci est la \red{contribution} au domaine !
+		\end{itemize}
+		\item Analyser et critiquer le modèle proposé au travers des expérimentations et en regard aux préalables
+		\item Résumer la contribution et la critique avant d'ouvrir les perspectives offertes par la contribution
+	\end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : Structure détaillée}
+Éléments dans un ordre adéquat:
+\begin{itemize}
+	\item Occurrence de la figure, d'un algorithme, etc. et ensuite : 
+	\begin{itemize}
+		\item Explications;
+		\item Et/ou commentaires.
+	\end{itemize}
+	\item Enchainement adéquat des paragraphes
+	\begin{itemize}
+		\item L'enchainement se fait au moyen de mots de liaisons;
+		\item Un paragraphe c'est le bloc de base d'une sous-section;
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : Paragraphes}
+	\begin{itemize}
+		\item Un paragraphe est un ensemble de phrases qui gravitent toutes autour d'une idée commune;
+		\item Un paragraphe se caractérise donc par son unité de sens;
+		\item Les paragraphes se divisent là où on change d'idée.
+	\end{itemize}
+
+\begin{block}{Structure d'un paragraphe}
+	\begin{enumerate}
+		\item \red{idée énoncée} : une partie énonçant l'idée principale du paragraphe
+		\item \red{idée illustrée} : une partie illustrant l'idée principale du paragraphe
+		\item \red{idée expliquée} : une partie expliquant l'idée principale du paragraphe ou expliquant l'idée illustrée
+		\item (optionnel) \red{transition} : une partie rappelant l'idée principale du paragraphe et préparant le passage au paragraphe suivant
+	\end{enumerate}
+\end{block}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : Mots de liaison\footnote{Voir pp. 28 fig 3.2 du \href{http://www2.ift.ulaval.ca/\%7Echaib/IFT-6001/articles/ManuelRuddyLelouche.pdf}{\red{document de Lelouche}}}}
+
+\begin{itemize}
+	\item Certaines expressions sont polysémiques i.e. susceptibles d'exprimer plusieurs fonctions différentes;
+	\item Il faut donc se référer au \red{contexte};
+	\item Sinon mène à des ambiguïtés et donc met l'argumentaire en péril.
+\end{itemize}
+
+	\begin{exampleblock}{Exemple}
+		« D'après leurs critiques, remarques et suggestions, je les ai modifiées. »
+		\begin{itemize}
+			\item Ici, «\textit{d'après}» n'exprime manifestement pas la bonne fonction. Il serait plus clair et plus exact de dire
+			\begin{itemize}
+				\item Suite à leurs critiques, remarques et suggestions, je	les ai modifiées
+			\end{itemize}
+			\item «\textit{suite à}» signifiant alors «\textit{à cause de}», «\textit{pour prendre en compte}», par opposition, par exemple, à
+			\begin{itemize}
+				\item D'après les commentaires reçus, le système est très apprécié
+			\end{itemize}
+			\item ou les commentaires seraient faits plutôt en faveur du système.
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Placer le mot de liaison au bon endroit}
+
+\only<1-2>{«[le logiciel MacHTTP] s'installe plutôt bien et son utilisation requiert de disposer correctement les fichiers d'images ainsi que les fichiers de description (map). La documentation est \textit{toutefois} bien faite et incluse avec le logiciel.»}
+
+\only<3->{«[le logiciel MacHTTP] s'installe plutôt bien. \textit{\red{Toutefois}}, son utilisation requiert de disposer correctement les fichiers d'images ainsi que les fichiers de description (map). \textit{\red{Heureusement}}, cette disposition est rendue plus facile grâce à la documentation incluse avec le logiciel, qui est bien faite.»}
+
+\only<2->{\color{ulblue}{L'adverbe \textit{toutefois} exprime des réserves de l'auteur, mais ces réserves sont mal exprimées. En effet, elles ne peuvent concerner la documentation, puisque celle-ci est bien faite. Elles concernent plutôt la nécessité de disposition correcte de certains fichiers, que \textit{et} n'introduit donc pas adéquatement. C'est là qu'aurait dû se trouver le \textit{toutefois}.}}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Expliquer les termes techniques}
+
+\begin{itemize}
+	\item Le lecteur ne connait pas tout votre domaine et il serait bon de le préparer en le tenant par la main.
+	\item Définir tout mot technique la première fois que vous vous en servez. Si possible, introduisez les de manière naturelle.
+	\item Éviter tout jargon dans la mesure du possible.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Éviter tout jargon}
+
+Une seconde source de difficulté pour le lecteur est le jargon spécialisé. Par jargon, on entend :
+\begin{itemize}
+	\item les termes de spécialité
+	\begin{itemize}
+		\item eg. une céphalée, un prurit, un solécisme
+	\end{itemize}
+	
+	\item les termes anglicisés 
+	\begin{itemize}
+		\item eg. un buffer, un tape drive, un shell, un exhaust, un windshield, un spare, un shaft
+	\end{itemize}
+	\item les sigles et acronymes
+	\begin{itemize}
+		\item eg. un SIMM de 8 Meg, un MDP, un POMDP
+	\end{itemize}
+	\item et les dénominations spécifiques
+	\begin{itemize}
+		\item eg. un 486, un 3270, le DOS
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Pour éviter un tel jargon}
+
+Une seconde source de difficulté pour le lecteur est le jargon spécialisé. Par jargon, on entend :
+\begin{itemize}
+	\item Pour un terme de spécialité un équivalent approximatif emprunté à la langue courante
+	\begin{itemize}
+		\item eg. une céphalée : un mal de tête, un prurit : une démangeaison, un solécisme : une erreur du langage qui enfreint les règles de la syntaxe, etc.
+	\end{itemize} 
+	\item pour un terme anglicisé un équivalent français 
+	\begin{itemize}
+		\item un tampon, un dérouleur de bande, une invite de commande, un pot d'échappement, un pare-brise, etc.
+	\end{itemize} 
+	\item pour un acronyme sa signification, avec sa traduction si nécessaire: 
+	\begin{itemize}
+		\item «une barrette d'éléments de mémoire (SIMM, pour single inline memory module) de 8 Meg», un processus décisionnel de Markov (MDP pour Markovian decision process);
+	\end{itemize}	
+	\item pour une dénomination spécifique la nature de l'élément ainsi désigné
+	\begin{itemize}
+		\item un microprocesseur 80486, un terminal 3270, le système d'exploitation DOS (Disk Operating System), etc.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Développement : l'art de bien rédiger}
+\begin{itemize}
+	\item Conduite de l'argumentation.
+	\begin{itemize}
+		\item Pourquoi une bonne argumentation;
+		\item Comment élaborer une bonne argumentation.
+	\end{itemize}
+	\item \red{Qualité de l'écrit}
+	\begin{itemize}
+		\item Fautes de vocabulaire;
+		\item Fautes de grammaire;
+		\item Fautes de ponctuation;
+		\item Style d'écriture.
+	\end{itemize}
+	\item \LaTeX
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Fautes de vocabulaires : barbarisme}
+\begin{itemize}
+	\item Utilisation de mots inexistants;
+	\item Mots mal orthographiés;
+	\item Mots employés à la place d'autres mots.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Utilisation de mots inexistants}
+
+Ou invention de mots, en remplacement de mots existants: souvent le fait d'une mauvaise \red{construction de mots}.
+\begin{itemize}
+	\item *acquéri (acquis), *assire (asseoir), *comprenable (compréhensible),
+	\item *digresser (s'éloigner du sujet, faire des digressions),
+	\item *émouver (émouvoir), *intrusif (importun, inopportun, indiscret),
+	\item *lisable (lisible), *ressucitation (résurrection),
+	\item *teindu (teint), *voteur (votant), etc.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Utilisation de mots inexistants}
+
+Une autre cause de barbarisme est la proximité phonétique d'un terme anglais :
+\begin{itemize}
+	\item le plus fréquent au Québec est : Canceler au lieu d'annuler;
+	\item Selon la cédule établie au début du trimestre; aurait dû s'écrie : Selon l'horaire établi au début du trimestre;
+	\item Il était là avec toute sa gang d'amis; Gang = troupe, groupe, ...
+\end{itemize}
+
+\begin{center}\small
+	\begin{tabular}{ccc}
+	\hline 
+	Au lieu d'utiliser &  Utilisez & terme anglais original \\ 
+	\hline 
+	*canceler & annuler & to cancel \\ 
+	*cancellation & annulation &  cancellation\\ 
+	*cédule & horaire &  schedule\\ 
+	*céduler & programmer, mettre à l'horaire & to schedule \\ 
+	*compétitionner & concurrencer, concourir  &  to compete\\ 
+	*gang& bande, troupe, groupe & gang \\ 
+	*senser & sonder & to sense \\ 
+	*senseur&  détecteur, capteur & sensor \\ 
+	\hline 
+\end{tabular} 
+\end{center}
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Utilisation de mots inexistants}
+
+La dernière cause de barbarisme, et non des moindres, est l'utilisation pure et simple de mots anglais
+\begin{itemize}
+	\item Tant les francais : 
+	\begin{itemize}
+		\item parking, shopping, jogging, week-end, roller, snowboard, etc.
+	\end{itemize}
+	\item Que les Québecois : 
+	\begin{itemize}
+		\item fun, chum, toune (ou tune), fixer (qqchose), fitter, windshield (et autres parties des vehicules), etc. 
+	\end{itemize}
+\end{itemize}
+Pour plus d'exemples, voir l'annexe C du \href{http://www2.ift.ulaval.ca/\%7Echaib/IFT-6001/articles/ManuelRuddyLelouche.pdf}{\red{document de Lelouche}}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Orthographe}
+
+\begin{itemize}
+	\item Attrapper, atraper au lieu de attraper;
+	\item Chapître au lieu de chapitre;
+	\item Renouveller au lieu de renouveler;
+	\item Le cas des homophones lexicaux.
+\end{itemize}	
+
+\begin{center}\scriptsize
+	\begin{tabular}{ccc}
+		conte / comte / compte & exaucer / exhausser & prémices / prémisse(s) \\ 
+		cour / court / cours / courre & gêne / gène &  saut / sot / seau / sceau\\ 
+		censé / sensé & jeune / jeûne &  sur (acide) / sûr (certain, assuré)\\ 
+		~ & parti / partie & ~ \\ 
+	\end{tabular} 
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Anglicisme : Faux amis}
+
+Utilisation d'anglicismes lexicaux, en particulier les faux amis
+\begin{center}\tiny
+	\begin{tabular}{cccc}
+		\hline
+		Faux ami & Utiliser & Faux ami & Utiliser \\
+		\hline
+		adresser un problème & s'attaquer à, aborder & excéder\footnote{énerver profondément} & dépasser\\ 
+		appréhender\footnote{arrêter un criminel} & comprendre, percevoir & exhibition & exposition, démonstration\\ 
+		assomption & supposition & filière & classeur, meuble de rangement \\ 
+		assumer & supposer & issue\footnote{sortie} & numéro \\ 
+		capturer & capter, prendre en compte & s'objecter & s'opposer \\ 
+		compréhensif & complet, exhaustif & papier & article, rapport \\ 
+		distribué & réparti & performance & prestation \\ 
+		drastique & important, violent, énergique, draconien & réaliser & se rendre compte \\ 
+		emphase & force, accent, mise en relief & sérieux & grave \\ 
+		encourir\footnote{s'exposer} & engager, contracter, subir & sophistiqué & élaboré, versatile \\ 
+		éventuellement & en fin de compte & supposé & censé \\ 
+		versatile & polyvalent, souple, talentueux &  &  \\ 
+		\hline
+	\end{tabular} 
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Anglicismes}
+
+Autre anglicisme qui résulte d'une traduction ou d'une adaptation mot à mot
+\begin{center}\tiny
+	\begin{tabular}{ccc}
+		\hline
+		Au lien d'utiliser & Utiliser & expression originale \\
+		\hline
+		 Au lieu d'utiliser & Utilisez & expression anglaise originale \\ 
+		*ci-haut, *ci-bas & ci-dessus, ci-dessous & above, below \\ 
+		*dépendant ou dépendamment de & selon, en fonction de & depending on ou upon \\ 
+		*faire un téléphone & placer un appel, donner un coup de fil & to make a phone call \\ 
+		*faire du sens & avoir du sens & to make sense \\ 
+		*le 15 de janvier & le 15 janvier & the 15th of January \\ 
+		\hline
+	\end{tabular} 
+\end{center}
+
+\vfill
+\scriptsize{
+Ces deux dernières listes sont loin d'être exhaustives; voir le dictionnaire des anligicismes [Colpron, 1982], \href{http://bdl.oqlf.gouv.qc.ca/bdl/gabarit_bdl.asp?T1=anglicisme&T3.x=0&T3.y=0}{l'\red{OQLF}} ou encore \href{http://www.alloprof.qc.ca/BV/pages/f1575.aspx}{\red{AlloProf}}.}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Confusions}
+
+Mots remplacés par d'autre à cause de structure d'énonciations voisines\footnote{\scriptsize{Exemples déjà rencontrés par Lelouche.}}:
+\begin{center}\tiny
+	\begin{tabular}{ccc}
+		acceptation / acception & croire / croître & matériau(x) / matériel(s) \\
+		apparence / apparition & discret / secret & préjudice / préjugé \\
+		s'attacher / s'attarder /s'attaquer & disponibilité / disposition & ressort / ressource(s) \\
+		cessation / cession & divaguer / diverger & tendresse / tendreté \\
+		clarifier / éclaircir / éclairer & échoir / échouer & transiger / transiter \\
+		collision / collusion & éconduire / reconduire & transparaître / transpirer \\
+		conjecture / conjoncture & évacuer / évincer & usagé / usager \\
+		consister (en) / constituer & habileté / habilité & vague / vaste \\
+		visualisation / visionnement & etc. & \\
+	\end{tabular} 
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Grammaire}
+
+Rappel rapides des fautes usuelles :
+\begin{itemize}
+	\item Fautes de genre;
+	\item Fautes d'accord;
+	\item Confusions d'expressions homophones;
+	\item Fautes de construction audibles.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Faute de genre}
+
+Fautes lexicales fréquentes à l'oral mais se retrouve parfois à l'écrit : 
+\begin{itemize}
+	\item Féminisation fréquente de termes empruntés à l'anglais: 
+	\begin{itemize}
+		\item job, gang, sandwich, trip, toast ...
+	\end{itemize}
+	\item Féminisation fréquente, en particulier au Québec, de noms masculins commençant par une voyelle:  
+	\begin{itemize}
+		\item acétate,  argent,  astérisque,  autobus,  avion,  écran,  édifice,  élève,  en-tête,exemple, horaire, obstacle, organe, organisme, ...
+	\end{itemize}
+	\item (plus  rare):  Masculinisation  de  noms  féminins  commençant  par  une  voyelle:
+	\begin{itemize}
+		\item anagramme, autoroute, épigramme, épigraphe, icône, interface, orbite, ...
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Faute d'accord}
+
+Les types d'accord peuvent être regroupés
+\begin{itemize}
+	\item Selon la forme : accord en genre, en nombre, et/ou en personne;
+	\item Selon la portée : accord nominal (avec un	nom ou un pronom) ou verbal (avec un verbe) 
+	\begin{itemize}
+		\only<1>{\item «Les dates du 14 et 15 mars ont été retenues pour notre faculté.»}
+		\only<2->{\item «Les dates \red{des} 14 et 15 mars ont été retenues pour notre faculté.»}
+		\only<1-2>{\item «La pertinence sociale et la pertinence académique du certificatne fait aucun doute aux yeux des membres du comité.»}
+		\only<3->{\item «La pertinence sociale et la pertinence académique du certificatne \red{ne font} aucun doute aux yeux des membres du comité.»}
+	\end{itemize}
+	\item Selon le domaine : accord grammatical (les mots) ou sémantique (le sens)
+	\begin{itemize}
+		\only<1-3>{\item «Nous possédons tous l'optique en double (miroirs, barreau de YAG, etc.)»}
+		\only<4->{\item «Nous possédons \red{toute} l'optique en double (miroirs, barreau de YAG, etc.)»}
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Confusions homophones}
+
+\begin{center}\tiny
+	\begin{tabular}{ccc}
+		a / à & leur / leurs & quelque / quelques \\
+		ce / se & ma / m'a / m'as & quel(le)(s) que / quelque(s) \\
+		ces / ses / c'est / s'est & mes / mais / m'es / m'est & quoique / quoi que \\
+		d'avantage / davantage & mon / mont / m'ont & sans / s'en / sang \\
+		dans / d'en & ni / nie / n'y & soi / sois / soit \\
+		différend / différent & on / ont & son / sont \\
+		du / dû & ou / où & sur / sûr \\
+		en train / entrain & peu / peut / peux & ta / t'a / t'as \\
+		es / est / et / aie / aies / ait & qu'il / qui l' & tant / temps / t'en \\
+		guerre / guère & quand / quant / qu'en & toi / toit \\
+		la / là / l'as / l'a & quelle(s) / qu'elle(s) & ~ \\
+	\end{tabular} 
+\end{center}
+D'autres homophones sont moins «localisés». Ils relèvent davantage et plus globalement d'untotal \red{mépris des conjugaisons}\footnote{\tiny{Exemples issus de notes d'un professeur selon Lelouche}}:
+\begin{center}
+	\textit{une équipe de professeur\only<2>{\red{s}} et d'employ\only<1>{er}\only<2>{\red{és}} du département}
+	
+	\textit{Il y a une imprimante laser de branch\only<1>{ez}\only<2>{\red{ée}} sur le micro.}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Fautes de construction audibles}
+
+Résultat de la collision entre deux tournures incompatibles:
+\begin{center}\tiny
+	\begin{tabular}{cc}
+		\hline
+		Construction incorrecte & Construction correcte correspondante \\
+		\hline
+		*adaptation du diplôme sur le marché du travail & adaptation du diplôme \red{au} marché du travail \\
+		*ce qui est relié avec les armes à feu & ce qui est relié \red{aux} armes à feu \\
+		*l'université est supposée de favoriser... & l'université est \red{censée} favoriser... \\
+		*plus petit/grand ou égal à & inférieur/supérieur ou égal à \\
+		*Plus ça va, plus qu'on le demande. & Plus ça va, plus on le demande. \\
+		*les mêmes outils avec lesquels... & les mêmes outils \red{que ceux} avec lesquels... \\
+		*plus de variété que j'ai trouvée... & plus de variété \red{que celle} que j'ai trouvée... \\
+		*la question que j'ai répondue & la question \red{à laquelle} j'ai répondu \\
+		*les choses que j'ai besoin & les choses \red{dont} j'ai besoin, que \red{je désire} \\
+		*ce que je me suis rendu compte & ce \red{dont} je me suis rendu compte, ce que \red{j'ai vu} \\
+		*adapté avec & adapté \red{à}, \red{en accord} avec \\
+		*documents à être échangés via l'ENA & \red{devant} être échangés \\
+		*se connecter sur un serveur & se connecter \red{à} un serveur \\
+		\hline
+	\end{tabular} 
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Fautes de construction de phrases}
+
+\begin{center}\tiny
+	\begin{tabular}{cc}
+		\hline
+		Construction de phrase incorrecte & Corrections possibles \\
+		\hline
+		*Je ne suis pas certain si ce sera suffisant. & Je ne suis pas certain \red{que ce soit} suffisant. \\
+		~ & Je ne sais pas si ce sera suffisant. \\
+		*On voit c'est quoi le marché. & On voit \red{ce qu'est} le marché, \red{quel est} le marché. \\
+		~ & ~ \\
+		*Certains professeurs ça leur manque... & \red{Il manque} à certains professeurs... \\
+		~ & Certains professeurs \red{manquent} de... \\
+		*... entre la période de fondation jusqu'à l'année 1991... &  entre la période de fondation \red{et} l'année 1991... \\
+		~  &  \red{de} la période de fondation (jusqu') à l'année 1991 \\
+		*Au cours des dernières années, & Au cours ..., l'évolution ... \red{a été} caractérisée ... \\
+		l'évolution des systèmes est caractérisée ... & \red{Depuis quelques années}, l'évolution ... est caractérisée ... \\
+		~ & ~ \\
+		*... tant par sa simplicité et sa pureté. & ... tant par sa simplicité \red{que par} sa pureté. \\
+		~ & ~ \\
+		*La raison pour laquelle [observation] & [Observation] est \red{parce que} [cause] \\ 
+		est parce que [cause] & \red{La raison} pour laquelle (ou: de) [observation] est [cause] \\
+		\hline
+	\end{tabular} 
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Ponctuation}
+
+\begin{itemize}
+	\item Virgule et point-virgule;
+	\item Parenthèses;
+	\item Guillemets;
+	\item Point de suspension.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Virgule et point virgule}
+
+Quand choisir quoi : 
+\begin{itemize}
+	\item Jamais de virgule entre le verbe et son sujet (sauf si le sujet comprend une incise), ni entre le verbe et son complément d'objet direct, quelle que soit la longueur du sujet ou du complément direct;
+	\item Le point virgule sert à séparer deux propositions indépendantes ou principales dont la seconde prolonge l'idée exprimée ou amorcée par la première;
+	\item La simple virgule est insuffisante dans ce cas, sauf en cas d'ennumération;
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}[fragile]{Parenthèses}
+
+\begin{itemize}
+	\item Elles signalent des informations non essentielles à la compréhension générale du texte véhiculé;
+	\item Le texte entre \textbf{\red{( )}} peut donc être omis en première lecture, sans rendre le message incompréhensible ou incorrect;
+	\item Il est également possible d'utiliser le \red{tiret d'incise} "--" (\verb+--+ en \LaTeX). Il remplace avantageusement les parenthèses dans un écrit littéraire et donne plus de force et de finesse que les virgules\footnote{Pour affiner la réflexion, je vous conseille l'article -- tout en subtilité -- de J.-P. Lacroux dans \href{http://www.orthotypographie.fr/volume-II/telegramme-troncation.html\#Tiret}{\red{Orthotypographie}}.}.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Guillemets et points de suspension}
+\begin{itemize}
+	\item Guillemets en général pour les citations;
+	\item Mots techniques en italique;
+	\item Les point de suspension indiquent en général une énumération incomplète, en substitution éventuelle  de \red{etc.}\footnote{etc... est clairement redondant.}.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Style}
+\begin{itemize}
+	\item Clarté et précision;
+	\item Techniques d'amélioration du style;
+	\begin{itemize}
+		\item Éviter les phrases longues;
+		\item Rendre le texte fluide;
+		\item Établir une correspondance/analogie/comparaison;
+		\item Éviter les ambiguïtés;
+		\item Faire attention aux répétitions;
+		\item Éviter les pléonasmes, les anglicismes, les verbes très généraux, les expressions populaires;
+		\item Éviter le langage parlé.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Phrases trop longues}
+\begin{itemize}
+	\item Une phrase au-delà de deux lignes risque de poser problème;
+	\item Plusieurs phrases, généralement courtes, au niveau d'un paragraphe;
+	\item Lire/re-lire et ensuite faire lire permet d'améliorer le texte;
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Fluidité du texte}
+Éliminer les conjonctions ou pronoms relatifs tels que : « qui », « que », etc.
+
+\begin{exampleblock}{Exemple}
+	\begin{itemize}
+		\item l'apprentissage est un concept qui paraît simple
+		\begin{itemize}
+			\item le concept d'apprentissage paraît simple
+		\end{itemize}
+		\item Les définitions qui en existent sont multiples
+		\begin{itemize}
+			\item il en existent de multiples définitions
+		\end{itemize}	
+		\item Avant que je rédige mon rapport, je dois rassembler et organiser mes idées
+		\begin{itemize}
+			\item Avant de rédiger mon rapport, je dois rassembler et organiser mes idées
+		\end{itemize}	
+		\item un ensemble de machines-outils qui permettent de découper et de façonner le métal
+		\begin{itemize}
+			\item un ensemble de machines-outils permettant de découper et de façonner le métal
+		\end{itemize}	
+	\end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Correspondance/comparaison/analogie}
+
+Prendre un individu d'une population pour en faire un exemple plutot que de se rapporter au groupe.
+
+\begin{exampleblock}{Exemple}
+	\begin{itemize}
+		\item Les fautes de frappe consistent souvent à omettre, ajouter, ou remplacer des caractères;
+		\begin{itemize}
+			\item \red{Une faute} de frappe consiste souvent à omettre, ou remplacer \red{un caractère}. 
+		\end{itemize}
+	\end{itemize}
+\end{exampleblock}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Ambiguïtés}
+
+\begin{itemize}
+	\item Si un mot (nom, verbe, adjectif, ou simplement mot de liaison) a plusieurs sens possibles,
+	\begin{itemize}
+		\item Alors un lecteur ou une lectrice risque de ne pas interpréter votre texte comme vous l'entendiez.
+	\end{itemize}
+	\item Les pronoms dans les phrases longues peuvent mener à des ambiguïtés;
+	\begin{itemize}
+		\item Il faudra alors soit couper la phrase, soit lever l'ambiguïté en ajoutant une précision.
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Ambiguïtés}
+
+\only<1-4>{
+\begin{exampleblock}{Exemple}
+	\begin{itemize}
+		\item<1-> Un dernier fait est l'expansion vers le monde de l'entreprise \only<1>{[...]}\only<2->{donc l'ouverture de bureaux de vente à travers le monde.}
+		\only<1>{\begin{itemize}
+			\item l'expansion de quoi vers le monde de l'entreprise?
+		\end{itemize}}
+		\item<3-> Un dernier fait est l'expansion de \red{l'entreprise vers le monde} \only<4>{\red{qui se traduit par} l'ouverture de bureaux de vente à travers le monde}
+	\end{itemize}
+\end{exampleblock}}
+
+\only<5->{
+	\begin{exampleblock}{Autre exemple}
+		\begin{itemize}
+			\item Ces participants utiliseront un système permettant de faciliter leurs tâches: des catalogues de ventes et d'achats, des services de marchés, etc., basés sur des standards relatifs à l'Internet.
+			\begin{itemize}
+				\item<only@6-7> Les tâches sont d'\red{élaborer} des catalogues et de \red{diffuser} des services ?
+				\item<only@8-> Le système fournit des ressources ?
+			\end{itemize}
+			\item<only@6-7> Ces  participants  utiliseront  un  système  permettant  de  faciliter  leurs  tâches:  \red{élaborer}  des  catalogues  de ventes et d'achats, \red{diffuser} des services de marchés, etc., basés sur des standards relatifs à l'Internet.
+			\item<only@8-> Ces participants utiliseront un système leur facilitant la tâche \red{en leur fournissant des ressources telles que} : catalogues de ventes et d'achats, services de marchés, etc., basés sur des standards relatifs à l'Internet.
+	\end{itemize}
+\end{exampleblock}}
+
+\only<9>{\begin{center}
+		\Large{\red{Faites relire par quelqu'un !}}
+\end{center}}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Répétitions et pléonasmes}
+
+\begin{itemize}
+	\item Certaines répétitions peuvent ajouter de la précision et lever l'ambiguïté, 
+	\item d'autres ne servent à rien et il faudrait les enlever pour ne pas alourdir le texte;
+	\item Plénonasmes
+\end{itemize}
+
+\begin{center}\scriptsize
+	\begin{tabular}{ccc}
+		~ & *monter en haut & ~ \\
+		*ainsi par exemple & 
+		*ajouter en plus & 
+		*comparer ensemble \\
+		*hasard imprévu & 
+		*monopole exclusif & 
+		*panacée universelle \\
+		*petite maisonnette & 
+		*pléonasme redondant & 
+		*première priorité \\
+		*prévoir à l'avance & 
+		*redemander de nouveau & 
+		*tous sont unanimes \\
+	\end{tabular} 
+\end{center}
+
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Anglicismes de tournure}
+
+Insidieux, car les mots sont francais.
+
+\begin{center}\tiny
+	\begin{tabular}{ccc}
+		\hline
+		Au lieu d'utiliser & Utilisez & expression anglaise originale \\
+		\hline
+		pour [une durée] & pendant & for \\
+		ça prend & il faut, il y a besoin de & it takes \\
+		prendre une marche & faire une promenade, se promener & to take a walk \\
+		prenez-en un! & [sur un présentoir] servez-vous! & take one! \\
+		en autant que je suis concerné & en ce qui me concerne& as far as I am concerned \\
+		\hline
+	\end{tabular}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Verbes polysémiques}
+
+Préciser les verbes \red{avoir}, et \red{faire}, couper les verbes \red{être}.
+
+\begin{exampleblock}{Exemple}
+	\begin{itemize}
+		\item<+-> L’essentiel du travail à \red{faire} \red{est} sur les coupures nécessaires à \red{faire} la version abrégée
+		\begin{itemize}
+			\item<+-> Préciser les deux faire et couper le être.
+		\end{itemize}
+		\item<+-> L’essentiel du travail à \red{effectuer} \red{est} sur les coupures nécessaires \red{pour construire} la version abrégée
+		\item<+-> Essentiellement, il faut \red{effectuer} les coupures nécessaires \red{pour construire} la version abrégée
+	\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Tournures abusives et expressions galvaudées}
+
+Les plus fréquentes sont \red{en tant que tel} et \red{au niveau de}.
+
+\only<1>{\begin{itemize}
+	\item \red{En tant que tel} ou son équivalent \red{comme tel} signifie "à ce titre" 
+	\item Dans  «le  $x$  en  tant  que  tel», on fait référence à autre chose que $x$, proche de $x$, par \red{opposition} à $x$
+	\begin{itemize}
+		\item eg. L’introduction d’un chapitre n’est pas en général une section \red{en tant que telle}, puisqu’elle peut ne pas comporter de titre.
+	\end{itemize}
+	\item Dans tous les autres cas, l'expression ne fait qu'alourdir le texte et pourrait être supprimée.
+\end{itemize}}
+\only<2>{
+\begin{itemize}
+	\item \red{Au niveau de} implique une gradation de comparaison; 
+	\item Exemples corrects :
+	\begin{itemize}
+		\item Je suis arrivé \red{au niveau du} pont.
+		\item Les questions de nationalité (ou de citoyenneté) se traitent \red{au niveau [du]} fédéral.
+		\item \red{Au niveau de} l’université, on doit normalement savoir rédiger.
+		\item Les compressions se font plus sentir \red{au niveau des} couches les plus défavorisées.
+	\end{itemize}
+	\item Exemples incorrects :
+\end{itemize}
+\begin{center}\tiny
+	\begin{tabular}{cc}
+		\hline
+		Tournure abusive & Tournure correcte correspondante possible\\
+		\hline
+		*\red{au niveau de} la théorie de la connaissance & \red{en ce qui concerne} la théorie de la connaissance\\
+		*économies \red{au niveau des} frais généraux & économies \red{dans} les frais généraux\\
+		*une faute \red{au niveau de} la syntaxe & une faute \red{de} syntaxe\\
+		*\red{au niveau des} loisirs, j’aime la danse & \red{quant aux} loisirs, j’aime la danse\\
+		\hline
+	\end{tabular}
+\end{center}}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Style allocutif, ton et niveau de langue}
+\begin{itemize}
+	\item Éviter les expressions empruntées à langue orale, ou pire familière ou vulgaire
+	\item Éviter le style \red{allocutif}:
+	\begin{itemize}
+		\item Parler de soi en disant "je"
+		\item S'adresser au lecteur directement 
+	\end{itemize}
+\end{itemize}
+
+\begin{center}\tiny
+	\begin{tabular}{ccc}
+		\hline
+		Au lieu d’écrire & Écrivez & Pourquoi?\\
+		\hline
+		\red{peu importe} [+ nom] & quel que soit, indépendamment de & langue orale\\
+		cette rencontre est \red{rendue} une tradition & cette rencontre est devenue une tradition & langue orale\\
+		un \red{type} & un monsieur, un homme, une personne & langue populaire\\
+		cela \red{m’}amène à \red{me} poser la question & cela amène à se poser la question & style allocutif\\
+		\hline
+	\end{tabular}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}{Conclusion}
+\begin{itemize}
+	\item Argumentez/expliquez/justifiez;
+	\item Élaborez des textes cohérent et articulé;
+	\item Utilisez efficacement les mots de liaison;
+	\item Mettez des chapeaux introductifs;
+	\item Évitez le langage parlé;
+	\item Faites attention aux fautes d'orthographe et aux erreurs typographiques;
+	\item Faites attention aux erreurs grammaticales;
+	\item Lisez et relisez pour améliorer le style;
+	\item Faites vous aider par un dictionnaire.
+\end{itemize}
+
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------- 
+\begin{frame}[label=conclu]{Conclusion}
+\begin{center}
+	\Huge{That's all folks !}
+	
+	\normalsize Questions ?
+\end{center}
+\end{frame}
+
+% End of slides
+\end{document}
+
+
+
